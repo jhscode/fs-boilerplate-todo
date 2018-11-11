@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/healthcheck', require('./routes/index').router);
-app.use('/login', require('./routes/login').router);
 app.use('/todos', require('./routes/todos').router);
 
 app.use((err, req, res, next) => {
